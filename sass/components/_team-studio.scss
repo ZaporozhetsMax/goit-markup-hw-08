@@ -1,0 +1,85 @@
+.team {
+    background-color: var(--background-btn);
+    padding: 94px 0px;
+}
+
+.team__text {
+    @include font(700,36,1.17,0.03);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.hero {
+    list-style-type: none;
+    display: flex;
+&>li {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}    
+}
+
+.team__hero>li:not(:first-child) {
+    margin-left: 30px;
+}
+
+.hero__status {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--text-btn-accent);
+}
+
+.hero__name {
+    @include font(500, 16, 1.19, 0.03);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.hero__position {
+    @include font(400, 16, 1.19, 0.03);
+    color: var(--second-color);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.hero__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero__item {
+    height: 44px;
+    width: 44px;
+}
+
+.hero__social-netw {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:hover,
+&:focus {
+    background-color: var(--accent-color);
+    outline: transparent;
+}
+}
+
+.hero__social-netw:hover .hero__icon,
+.hero__social-netw:focus .hero__icon {
+    fill: var(--text-btn-accent);
+}
+
+.hero__icon {
+    fill: var(--icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+
+

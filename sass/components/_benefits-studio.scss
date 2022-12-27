@@ -1,0 +1,32 @@
+.benefits {
+    list-style-type: none;
+    display: flex;    
+}
+
+
+.section__benefits{
+ &>li:not(:first-child) {
+    margin-left: 30px;   
+}
+}
+.benefits__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 120px;
+    max-width: 270px;
+    background: var(--background-btn);
+    border-radius: 4px;
+}
+
+.benefits__text {
+    @include font(700,14,1.14,0.03);
+    margin-bottom: 10px;
+}
+
+.benefits__subtext {
+    @include font(null,14,1.71,0.03);
+    color: var(--second-color);
+    max-width: 270px;
+}
