@@ -2,11 +2,17 @@ footer {
     background: var(--footer-backround-color);
     // margin: 0 auto;
     padding: 60px 0;
+    @include desktop{
+        margin: 0 auto;
+        // padding: 0;
+    }
 }
 
-
 .footer-connect__logo {
-    margin-bottom: 20px;
+    @include font(700,24,1.17,0.03);
+    @include desktop{
+        @include font(700,24,1.17,0.03)
+    }
 }
 
 .logo__text-studio--color {
@@ -26,7 +32,13 @@ footer {
 }
 
 .footer-adress__list:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include tablet{
+        margin-bottom: 8px;
+    }
+    @include desktop{
+        margin-bottom: 9px;
+    }
 }
 
 
@@ -34,6 +46,10 @@ footer {
 .footer-adress .footer-adress__map {
     color: var(--text-btn-accent);
 }
+
+// .footer-adress__phone{
+//     margin-bottom: 60px;
+// }
 
 .footer-adress__map:hover,
 .footer-adress__map:focus,
@@ -49,17 +65,22 @@ footer {
     text-transform: uppercase;
     color: var(--text-btn-accent);
     margin-bottom: 20px;
-    text-align: left;
+    text-align: center;
+    @include desktop{
+        text-align: left;   
+    }
 }
 
 .footer-social__list {
     list-style-type: none;
     display: flex;
+    justify-content: center;
 }
 
-.footer-social--margin {
-    margin-left: 70px;
-}
+// .footer-social--margin {
+//     margin-left: 70px;
+// }
+
 
 .footer-social__netw {
     width: 44px;
@@ -75,10 +96,54 @@ footer {
 }
 
 .container__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 60px;
+    .footer-connect__logo {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        address{
+            text-align: center;
+        }   
+    
+    @include tablet{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 60px;
+        column-gap: 165px;
+        .footer-connect__logo {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        address{
+            text-align: center;
+        } 
+    }
+    @include desktop{
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: normal;
+        align-items: center;
+        justify-content: space-between;
+        .footer-connect__logo {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        address{
+            text-align: left;
+        }
+        // .footer-social--margin {
+        //     margin-left: 70px;
+        // }
+    }
 }
+    
+
 
 .footer-social__link {
     display: flex;
@@ -99,38 +164,54 @@ footer {
     fill: var(--text-btn-accent);
 }
 
-.footer-mailing--margin-left {
-    margin-left: auto;
-}
+// .footer-mailing--margin-left {
+//     margin-left: auto;
+// }
 
 .footer-mailing__text {
+    text-align: center;
     margin-bottom: 20px;
     font-family: 'Roboto';
     font-style: normal;
     @include font(700,14,1.14,0.03);
     text-transform: uppercase;
     color: var(--text-btn-accent);
+    @include desktop{
+        text-align: left;    
+    }
 }
+
+// .footer-mailing__form{
+//     display: block;
+//     gap: 20px;
+// }
 
 .footer-mailing__form-input {
     padding-left: 16px;
     color: var(--backround-color);
     background: var(--footer-backround-color);
-    width: 358px;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    margin-bottom: 20px;
+    @include desktop{
+    width: 358px;
+    margin-bottom: 0;
+    }
 }
 
 .footer-mailing__btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     position: relative;
     width: 200px;
     height: 50px;
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    margin-left: 12px;
     padding: 10px 28px;
     text-align: start;
     cursor: pointer;
@@ -139,6 +220,10 @@ footer {
     font-style: normal;
     @include font(700,16,1.88,0.06);
     color: var(--text-btn-accent);
+    @include desktop{
+        display: inline-block;
+        margin-left: 12px;
+    }
     &:hover,
     &:focus {
             color: var(--accent-color);

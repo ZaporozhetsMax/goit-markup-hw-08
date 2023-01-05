@@ -28,7 +28,7 @@
     <header class="header">
       <div class="container">
         <a class="logo header__logo" href=""
-          >Web<span class="logo__text header__logo--color">Studio</span></a
+          >Web<span class="logo__text header__logo-color">Studio</span></a
         >
         <nav class="navigation header__navigation">
           <ul class="navigation__list">
@@ -56,6 +56,7 @@
             >
           </li>
         </ul>
+        <button class="menu-open" type="button"><svg width="40" height="40" class="menu-open__icon"><use href="./images/icons.svg#icon-menu_24px"></use> </svg>  </button>
       </div>
     </header>
     <main>
@@ -148,7 +149,13 @@
           <h2 class="team__text">Наша команда</h2>
           <ul class="hero team__hero">
             <li>
-              <img src="./images/foto-1.jpg" alt="Дизайнер" width="270" height="260" />
+              <img
+                src="./images/foto-1.jpg"
+                alt="Дизайнер"
+                width="270"
+                height="260"
+                class="hero__foto"
+              />
               <div class="hero__status hero-name-position">
                 <h3 class="hero__name hero-name">Ігор Дем'яненко</h3>
                 <p class="hero__position hero-position">Product Designer</p>
@@ -181,7 +188,13 @@
               </div>
             </li>
             <li>
-              <img src="./images/foto-2.jpg" alt="Розробник" width="270" height="260" />
+              <img
+                src="./images/foto-2.jpg"
+                alt="Розробник"
+                width="270"
+                height="260"
+                class="hero__foto"
+              />
               <div class="hero__status">
                 <h3 class="hero__name">Ольга Рєпіна</h3>
                 <p class="hero__position">Frontend Developer</p>
@@ -214,7 +227,13 @@
               </div>
             </li>
             <li>
-              <img src="./images/foto-3.jpg" alt="Маркетолог" width="270" height="260" />
+              <img
+                src="./images/foto-3.jpg"
+                alt="Маркетолог"
+                width="270"
+                height="260"
+                class="hero__foto"
+              />
               <div class="hero__status">
                 <h3 class="hero__name">Микола Тарасов</h3>
                 <p class="hero__position">Marketing</p>
@@ -247,7 +266,13 @@
               </div>
             </li>
             <li>
-              <img src="./images/foto-4.jpg" alt="Дизайнер інтерфейсу" width="270" height="260" />
+              <img
+                src="./images/foto-4.jpg"
+                alt="Дизайнер інтерфейсу"
+                width="270"
+                height="260"
+                class="hero__foto"
+              />
               <div class="hero__status">
                 <h3 class="hero__name">Михайло Єрмаков</h3>
                 <p class="hero__position">UI Designer</p>
@@ -282,7 +307,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <section class="section section--padding">
         <div class="container">
           <h2 class="section__text">Постійні клієнти</h2>
           <ul class="clients">

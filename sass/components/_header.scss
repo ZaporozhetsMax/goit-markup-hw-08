@@ -3,20 +3,44 @@
 }
 
 .header .container {
-    display: flex;
-    align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet{
+            padding: 21px 15px;
+        }
+        @include desktop{
+            padding: 25px 15px;
+        }
+        
+    
 }
 
 /* ---логотип--- */
 
 .header__logo {
-    padding: 25px 0;
-    margin-right: 93px;
-    @include font(700, 26, 1.19, 0.03);
+        @include font(700,24,1.17,0.03);    
+    
+    @include tablet{
+        padding: 0;
+        margin-right: 87px;
+    }
+    @include desktop{
+        // padding: 25px 0;
+        margin-right: 93px;
+        @include font(700, 26, 1.19, 0.03);   
+    }
 }
 
-.header__logo--color {
+.header__logo-color {
     color: var(--logo-web-color);   
+}
+
+.navigation{
+    display: none;
+    @include tablet{
+        display: block;
+    }
 }
 
 .navigation__list {
@@ -46,20 +70,33 @@
     color: var(--accent-color);
  &::after {
     position: absolute;
-    bottom: 0;
     right: 0;
     content: ' ';
     width: 100%;
     height: 4px;
     background: #2196f3;
     border-radius: 2px;
+    @include tablet{
+        bottom: -2px;
+    }
+    @include desktop{
+        bottom: -1px;
+    }
 }   
 }
 
 /* ---контакти шапки--- */
 .connection {
     list-style-type: none;
-    display: flex;
+    display: none;
+    @include tablet{
+     display: inline;  
+    }
+    @include desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
 }
 
@@ -68,14 +105,23 @@
 }
 
 .connection__mail {
-    display: flex;
-    margin-right: 50px;
-    align-items: center;
+    // display: flex;
+    // margin-right: 50px;
+    // align-items: center;
     &:focus,
     &:hover {
     color: var(--accent-color);
     fill: currentColor;
 }
+    @include tablet{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    @include desktop{
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
 }
 
 .connection__mail,
@@ -87,6 +133,9 @@
     fill: var(--second-color);
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet{
+        padding: 0;
+    }
 }
 
 .connection__phone {
@@ -102,7 +151,17 @@
 .connection__icon {
     margin-right: 10px;
 }
-
+.menu-open{
+    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    background-color:var(--text-btn-accent);
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    @include tablet{
+        display: none;
+    }
+}
 
 
 
