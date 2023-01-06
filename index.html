@@ -56,7 +56,44 @@
             >
           </li>
         </ul>
-        <button class="menu-open" type="button"><svg width="40" height="40" class="menu-open__icon"><use href="./images/icons.svg#icon-menu_24px"></use> </svg>  </button>
+        <button class="mob-menu-open" type="button"><svg width="40" height="40" class="mob-menu-open__icon"><use href="./images/icons.svg#icon-menu_24px"></use> </svg>  </button>
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-menu__container">
+          <div class="btn-nav">
+        <button type="button" class="mobile-menu__close"><svg width="18" height="18" class="mob-btn-close"><use href="./images/icons.svg#icon-close"></use></svg></button>
+        <nav class="mobile-menu__navigation">
+          <ul class="mobile-menu__list">
+            <li><a href="" class="mobile-menu__link text-decor current" target="_self">Студія</a></li>
+            <li><a href="./portfolio.html" class="mobile-menu__link text-decor">Портфоліо</a></li>
+            <li><a href="" class="mobile-menu__link text-decor">Контакти</a></li>
+          </ul>
+        </nav></div>
+        <div class="con-netw">
+        <ul class="mobile-menu__connection">
+          <li><a href="tel:+380961111111" class="mobile-menu__phone mobile-menu__phone-decor"
+            >+38 096 111 11 11</a
+          > 
+          </li>
+          <li>
+            <a href="mailto:info@devstudio.com" class="mobile-menu__mail mobile-menu__mail-decor">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-menu__social-netw">
+          <li><a href="#" class="mobile-menu__netw inst">Instagram
+          </a></li>
+          <li><a href="#" class="mobile-menu__netw twit">Twitter
+          </a></li>
+          <li><a href="#" class="mobile-menu__netw faceb">Facebook
+          </a></li>
+          <li><a href="#" class="mobile-menu__netw">Linkedin
+          </a></li>
+        </ul></div>
+
+      </div>
+
       </div>
     </header>
     <main>
@@ -124,19 +161,22 @@
           <h2 class="about__text">Чим ми займаємося</h2>
           <ul class="application about__application">
             <li class="application__pictures">
-              <img src="./images/box-1.jpg" alt="верстка" width="370" height="294" />
+              <img srcset="./images/box-1.jpg 1x,
+              ./images/box-1-2x.jpg 2x" src="./images/box-1.jpg" alt="верстка" width="370" height="294" />
               <div class="application__label">
                 <h3 class="application__text">Десктопні додатки</h3>
               </div>
             </li>
             <li class="application__pictures">
-              <img src="./images/box-2.jpg" alt="оформлення" width="370" height="294" />
+              <img srcset="./images/box-2.jpg 1x,
+              ./images/box-2-2x.jpg 2x" src="./images/box-2.jpg" alt="оформлення" width="370" height="294" />
               <div class="application__label">
                 <h3 class="application__text">Мобільні додатки</h3>
               </div>
             </li>
             <li class="application__pictures">
-              <img src="./images/box-3.jpg" alt="результат" width="370" height="294" />
+              <img srcset="./images/box-3.jpg 1x,
+              ./images/box-3-2x.jpg 2x" src="./images/box-3.jpg" alt="результат" width="370" height="294" />
               <div class="application__label">
                 <h3 class="application__text">Дизайнерські рішення</h3>
               </div>
@@ -149,13 +189,28 @@
           <h2 class="team__text">Наша команда</h2>
           <ul class="hero team__hero">
             <li>
-              <img
+
+              <picture>
+                <source srcset="./images/foto-1.jpg 1x,
+                ./images/foto-1-2x.jpg 2x"
+                media="(min-width:1200px)">
+                <source srcset="./images/foto-1-tab.jpg 1x,
+                ./images/foto-1-tab-2x.jpg 2x"
+                media="(min-width:768px)">
+                <source srcset="./images/foto-1-mob.jpg 1x,
+                ./images/foto-1-mob-2x.jpg 2x"
+                media="(min-width:480px)">
+               <img
+              srcset="./images/foto-1.jpg 1x,
+              ./images/foto-1-2x.jpg 2x"
                 src="./images/foto-1.jpg"
                 alt="Дизайнер"
                 width="270"
                 height="260"
                 class="hero__foto"
-              />
+              /> 
+              </picture>
+              
               <div class="hero__status hero-name-position">
                 <h3 class="hero__name hero-name">Ігор Дем'яненко</h3>
                 <p class="hero__position hero-position">Product Designer</p>
@@ -188,13 +243,28 @@
               </div>
             </li>
             <li>
+
+              <picture>
+              <source srcset="./images/foto-2.jpg 1x,
+              ./images/foto-2-2x.jpg 2x"
+              media="(min-width:1200px)">
+              <source srcset="./images/foto-2-tab.jpg 1x,
+              ./images/foto-2-tab-2x.jpg 2x"
+              media="(min-width:768px)">
+              <source srcset="./images/foto-2-mob.jpg 1x,
+              ./images/foto-2-mob-2x.jpg 2x"
+              media="(min-width:480px)">
               <img
+              srcset="./images/foto-2.jpg 1x,
+              ./images/foto-2-2x.jpg 2x"
                 src="./images/foto-2.jpg"
                 alt="Розробник"
                 width="270"
                 height="260"
                 class="hero__foto"
               />
+              </picture>
+
               <div class="hero__status">
                 <h3 class="hero__name">Ольга Рєпіна</h3>
                 <p class="hero__position">Frontend Developer</p>
@@ -227,13 +297,29 @@
               </div>
             </li>
             <li>
-              <img
-                src="./images/foto-3.jpg"
-                alt="Маркетолог"
-                width="270"
-                height="260"
-                class="hero__foto"
-              />
+
+
+              <picture>
+                <source srcset="./images/foto-3.jpg 1x,
+                ./images/foto-3-2x.jpg 2x"
+                media="(min-width:1200px)">
+                <source srcset="./images/foto-3-tab.jpg 1x,
+                ./images/foto-3-tab-2x.jpg 2x"
+                media="(min-width:768px)">
+                <source srcset="./images/foto-3-mob.jpg 1x,
+                ./images/foto-3-mob-2x.jpg 2x"
+                media="(min-width:480px)">
+                <img
+                srcset="./images/foto-3.jpg 1x,
+                ./images/foto-3-2x.jpg 2x"
+                  src="./images/foto-3.jpg"
+                  alt="Розробник"
+                  width="270"
+                  height="260"
+                  class="hero__foto"
+                />
+                </picture>
+
               <div class="hero__status">
                 <h3 class="hero__name">Микола Тарасов</h3>
                 <p class="hero__position">Marketing</p>
@@ -266,13 +352,26 @@
               </div>
             </li>
             <li>
-              <img
-                src="./images/foto-4.jpg"
-                alt="Дизайнер інтерфейсу"
-                width="270"
-                height="260"
-                class="hero__foto"
-              />
+              <picture>
+                <source srcset="./images/foto-4.jpg 1x,
+                ./images/foto-4-2x.jpg 2x"
+                media="(min-width:1200px)">
+                <source srcset="./images/foto-4-tab.jpg 1x,
+                ./images/foto-4-tab-2x.jpg 2x"
+                media="(min-width:768px)">
+                <source srcset="./images/foto-4-mob.jpg 1x,
+                ./images/foto-4-mob-2x.jpg 2x"
+                media="(min-width:480px)">
+                <img
+                srcset="./images/foto-4.jpg 1x,
+                ./images/foto-4-2x.jpg 2x"
+                  src="./images/foto-4.jpg"
+                  alt="Розробник"
+                  width="270"
+                  height="260"
+                  class="hero__foto"
+                />
+                </picture>
               <div class="hero__status">
                 <h3 class="hero__name">Михайло Єрмаков</h3>
                 <p class="hero__position">UI Designer</p>
@@ -493,5 +592,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

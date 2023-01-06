@@ -2,16 +2,18 @@ footer {
     background: var(--footer-backround-color);
     // margin: 0 auto;
     padding: 60px 0;
-    @include desktop{
+
+    @include desktop {
         margin: 0 auto;
         // padding: 0;
     }
 }
 
 .footer-connect__logo {
-    @include font(700,24,1.17,0.03);
-    @include desktop{
-        @include font(700,24,1.17,0.03)
+    @include font(700, 24, 1.17, 0.03);
+
+    @include desktop {
+        @include font(700, 24, 1.17, 0.03)
     }
 }
 
@@ -21,22 +23,25 @@ footer {
 
 .footer-adress {
     list-style-type: none;
-& a {
-    text-decoration: none;
-    font-style: normal;
-    @include font(null,14,1.7,0.03);
-    color: var(--footer-adress-text);
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}    
+
+    & a {
+        text-decoration: none;
+        font-style: normal;
+        @include font(null, 14, 1.7, 0.03);
+        color: var(--footer-adress-text);
+        display: block;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 .footer-adress__list:not(:last-child) {
     margin-bottom: 8px;
-    @include tablet{
+
+    @include tablet {
         margin-bottom: 8px;
     }
-    @include desktop{
+
+    @include desktop {
         margin-bottom: 9px;
     }
 }
@@ -61,13 +66,14 @@ footer {
 }
 
 .footer-social__text {
-    @include font(700,14,1.14,0.03);
+    @include font(700, 14, 1.14, 0.03);
     text-transform: uppercase;
     color: var(--text-btn-accent);
     margin-bottom: 20px;
     text-align: center;
-    @include desktop{
-        text-align: left;   
+
+    @include desktop {
+        text-align: left;
     }
 }
 
@@ -96,53 +102,61 @@ footer {
 }
 
 .container__footer {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+
     .footer-connect__logo {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        address{
-            text-align: center;
-        }   
-    
-    @include tablet{
-        display:flex;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    address {
+        text-align: center;
+    }
+
+    @include tablet {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
         row-gap: 60px;
         column-gap: 165px;
+
         .footer-connect__logo {
             margin-bottom: 20px;
             text-align: center;
         }
-        address{
+
+        address {
             text-align: center;
-        } 
+        }
     }
-    @include desktop{
+
+    @include desktop {
         display: flex;
         flex-wrap: nowrap;
         column-gap: normal;
         align-items: center;
         justify-content: space-between;
+
         .footer-connect__logo {
             margin-bottom: 20px;
             text-align: left;
         }
-        address{
+
+        address {
             text-align: left;
         }
+
         // .footer-social--margin {
         //     margin-left: 70px;
         // }
     }
 }
-    
+
 
 
 .footer-social__link {
@@ -152,12 +166,13 @@ footer {
     justify-content: center;
     align-items: center;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-&:focus,
-&:hover {
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    outline: transparent;
-}
+
+    &:focus,
+    &:hover {
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        outline: transparent;
+    }
 }
 
 .footer-social__icon {
@@ -173,11 +188,12 @@ footer {
     margin-bottom: 20px;
     font-family: 'Roboto';
     font-style: normal;
-    @include font(700,14,1.14,0.03);
+    @include font(700, 14, 1.14, 0.03);
     text-transform: uppercase;
     color: var(--text-btn-accent);
-    @include desktop{
-        text-align: left;    
+
+    @include desktop {
+        text-align: left;
     }
 }
 
@@ -196,9 +212,10 @@ footer {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-bottom: 20px;
-    @include desktop{
-    width: 358px;
-    margin-bottom: 0;
+
+    @include desktop {
+        width: 358px;
+        margin-bottom: 0;
     }
 }
 
@@ -218,20 +235,26 @@ footer {
     border: none;
     font-family: 'Roboto';
     font-style: normal;
-    @include font(700,16,1.88,0.06);
+    @include font(700, 16, 1.88, 0.06);
     color: var(--text-btn-accent);
-    @include desktop{
-        display: inline-block;
+
+    @include desktop {
+        display:inline;
         margin-left: 12px;
     }
+
     &:hover,
     &:focus {
-            color: var(--accent-color);
-            background: var(--text-btn-accent);
-            // cursor: pointer;
-            border-radius: 4px;}
+        color: var(--accent-color);
+        background: var(--text-btn-accent);
+        // cursor: pointer;
+        border-radius: 4px;
+    }
+
     &:hover .footer-mailing__icon,
-    &:focus .footer-mailing__icon{fill: var(--accent-color);}
+    &:focus .footer-mailing__icon {
+        fill: var(--accent-color);
+    }
 }
 
 
