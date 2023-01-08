@@ -58,29 +58,32 @@
         gap: 30px;
     }
 
-    &__item {
-        // width: 100%;
-        // display: inline;
-        // display: flex;
-        width: calc((100%-30px)/2);
+    
+}
 
-        @media screen and(min-width:480px) {
-            display: flex;
-            width: 210px;
-        }
+.clients__item {
+    // width: 100%;
+    // display: inline;
+    // display: flex;
+    // width: calc((100%-30px)/2);
 
-        @media screen and(min-width:768px) {
-            display: flex;
-            width: 226px;
-        }
+    @media screen and(min-width:480px) {
+        display: flex;
+        width: 210px;
+        height: 92px;
+    }
 
-        @media screen and(min-width:1200px) {
-            display: flex;
-            width: 170px;
-            height: 92px;
-            justify-content: center;
-            align-items: center;
-        }
+    @media screen and(min-width:768px) {
+        display: flex;
+        width: 226px;
+    }
+
+    @media screen and(min-width:1200px) {
+        display: flex;
+        width: 170px;
+        // height: 92px;
+        justify-content: center;
+        align-items: center;
     }
 }
 

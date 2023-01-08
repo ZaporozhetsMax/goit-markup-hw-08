@@ -118,18 +118,18 @@ footer {
 
     @include desktop {
         display: flex;
-        // flex-wrap: nowrap;
-        // gap: 0;
+        flex-wrap: nowrap;
+        gap: 0;
         align-items: baseline;
         justify-content: space-between;
 
-        .footer-social--margin {
-            margin-left: 70px;
-        }
+        // .footer-social--margin {
+        //     margin-left: 70px;
+        // }
 
-        .footer-mailing--margin-left {
-            margin-left: auto;
-        }
+        // .footer-mailing--margin-left {
+        //     margin-left: auto;
+        // }
     }
 }
 
