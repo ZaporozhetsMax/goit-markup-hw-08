@@ -4,6 +4,11 @@
     line-height: $lh;
     letter-spacing: $ls+em;
 }
+
+@mixin phone{@media screen and(min-width:480px){
+    @content;
+}}
+
 @mixin tablet{@media screen and(min-width:768px) {
     @content;
 }}

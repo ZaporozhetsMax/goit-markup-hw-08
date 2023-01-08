@@ -1,67 +1,92 @@
 .solution {
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/effect-solution-mob.jpg);
-        @include retina{
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/effect-solution-mob2x.jpg);
-        }
-    background-repeat: no-repeat;
-    background-position: center;
-    // object-fit: contain;
-        // padding: 114px 60px;
-        max-width: 480px;
-        // height: 400px;
-        padding: 118px 0;  
 
-    @include tablet{
+    @include retina {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/effect-solution-tab.jpg);
-        @include retina{
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/effect-solution-tab2x.jpg);    
-        }
-    max-width: 768px;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 118px 0;
+            url(../images/effect-solution-mob2x.jpg);
     }
-    @include desktop{
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/effect-solution-desk.jpg);
-        @include retina{
-            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/effect-solution-desk2x.jpg);    
-        }
-    max-width: 1600px;
+
     background-repeat: no-repeat;
     background-position: center;
-    padding: 200px 0;
-    }   
+    object-fit: contain;
+    // padding: 114px 60px;
+    // max-width: 480px;
+    // min-width: 290px;
+    width:100%;
+    // height: 400px;
+    padding: 118px 0;
+
+    @include phone {
+        max-width: 480px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/effect-solution-mob.jpg);
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/effect-solution-mob2x.jpg);
+        }
+    }
+
+    @include tablet {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/effect-solution-tab.jpg);
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/effect-solution-tab2x.jpg);
+        }
+
+        max-width: 768px;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 118px 0;
+    }
+
+    @include desktop {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/effect-solution-desk.jpg);
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/effect-solution-desk2x.jpg);
+        }
+
+        max-width: 1600px;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 200px 0;
+    }
 }
 
-.solution--positional{
+.solution--positional {
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
 .solution__text {
-    @include font(900,26,1.61,0.06);
+    @include font(900, 26, 1.61, 0.06);
     text-align: center;
     text-transform: uppercase;
     color: var(--text-btn-accent);
-    width: 360px;
-    margin: 0 auto 30px;            
-    
-    @include desktop{
-        @include font(900,44,1.36,0.06);
+    // width: 360px;
+    width: 100%;
+    margin: 0 auto 30px;
+
+    @include phone{
+        width: 360px;
+    }
+
+    @include desktop {
+        @include font(900, 44, 1.36, 0.06);
         width: 696px;
     }
 }
 
-    
+
 
 .solution__button {
-    @include font(700,16,1.88,0.06);
+    @include font(700, 16, 1.88, 0.06);
     color: var(--text-btn-accent);
     background: var(--accent-color);
     margin: 0 auto;
@@ -69,20 +94,18 @@
     border: none;
     border-radius: 4px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-&:hover,
-&:focus {
-    color: var(--accent-color);
-    background: var(--text-btn-accent);
-    cursor: pointer;
-    border-radius: 4px;
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        background: var(--text-btn-accent);
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    @include desktop {
+        padding: 10px 32px;
+    }
+
 }
-
-@include desktop{
-    padding: 10px 32px;
-}
-
-}
-
-

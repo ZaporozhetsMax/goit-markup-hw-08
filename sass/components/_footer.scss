@@ -65,6 +65,7 @@ footer {
     color: var(--accent-color);
 }
 
+
 .footer-social__text {
     @include font(700, 14, 1.14, 0.03);
     text-transform: uppercase;
@@ -83,11 +84,6 @@ footer {
     justify-content: center;
 }
 
-// .footer-social--margin {
-//     margin-left: 70px;
-// }
-
-
 .footer-social__netw {
     width: 44px;
     height: 44px;
@@ -102,18 +98,12 @@ footer {
 }
 
 .container__footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 60px;
 
-    .footer-connect__logo {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    address {
-        text-align: center;
+    @include phone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 60px;
     }
 
     @include tablet {
@@ -124,38 +114,67 @@ footer {
         justify-content: center;
         row-gap: 60px;
         column-gap: 165px;
-
-        .footer-connect__logo {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        address {
-            text-align: center;
-        }
     }
 
     @include desktop {
         display: flex;
-        flex-wrap: nowrap;
-        column-gap: normal;
-        align-items: center;
+        // flex-wrap: nowrap;
+        // gap: 0;
+        align-items: baseline;
         justify-content: space-between;
 
-        .footer-connect__logo {
-            margin-bottom: 20px;
-            text-align: left;
+        .footer-social--margin {
+            margin-left: 70px;
         }
 
-        address {
-            text-align: left;
+        .footer-mailing--margin-left {
+            margin-left: auto;
         }
-
-        // .footer-social--margin {
-        //     margin-left: 70px;
-        // }
     }
 }
+
+.footer-connect__logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+address {
+    text-align: center;
+}
+
+
+
+.footer-connect__logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+address {
+    text-align: center;
+}
+
+
+//     @include desktop {
+//         display: flex;
+//         flex-wrap: nowrap;
+//         column-gap: normal;
+//         align-items: center;
+//         justify-content: space-between;
+
+//         .footer-connect__logo {
+//             margin-bottom: 20px;
+//             text-align: left;
+//         }
+
+//         address {
+//             text-align: left;
+//         }
+
+//         // .footer-social--margin {
+//         //     margin-left: 70px;
+//         // }
+//     }
+// }
 
 
 
@@ -206,7 +225,8 @@ footer {
     padding-left: 16px;
     color: var(--backround-color);
     background: var(--footer-backround-color);
-    width: 450px;
+    // width: 450px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -239,7 +259,7 @@ footer {
     color: var(--text-btn-accent);
 
     @include desktop {
-        display:inline;
+        display: inline;
         margin-left: 12px;
     }
 
